@@ -4,6 +4,9 @@
         th:replace="~{module/macro :: html(title = ${singlePage.spec.title} + ' - ' + ${site.title}, head = ~{::head}, content = ~{::content})}"
 >
 <th:block th:fragment="head">
+
+    <script>useDirectoryTree = true;</script>
+
     <th:block th:if="${theme.config.genernal.KaTex_plugin}">
         <link rel="stylesheet"
               th:href="@{/assets/plugins/katex/dist/katex.min.css?v={version}(version=${theme.spec.version})}">
@@ -58,7 +61,7 @@
                         onli = 'light'
                     }
                 </script>
-                <halo:comment group="content.halo.run" kind="Post" th:attr="name=${post.metadata.name}"
+                <halo:comment group="content.halo.run" kind="Post" th:attr="name=${singlePage.metadata.name}"
                               colorScheme="onli"/>
             </div>
 

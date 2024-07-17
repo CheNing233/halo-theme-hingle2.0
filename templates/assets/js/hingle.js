@@ -57,7 +57,7 @@ var Paul_Hingle = function (config) {
 
     // 目录树
     this.tree = function () {
-        if(isPost){
+        if(useDirectoryTree){
             var id = 1;
             var wrap = ks.select(".wrap");
             var headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
