@@ -3,10 +3,6 @@
         xmlns:th="https://www.thymeleaf.org"
         th:replace="~{module/macro :: html(title = ${site.title}, head=null, content = ~{::content})}"
 >
-<th:block th:fragment="head">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-</th:block>
-
 <th:block th:fragment="content">
     <main>
         <div class="wrap min">
