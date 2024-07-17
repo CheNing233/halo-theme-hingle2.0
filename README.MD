@@ -6,7 +6,6 @@
 > 🌸 同时也要在此感谢原作者 [Paul](https://github.com/Dreamer-Paul)
 <br>
 
-
 #### 预览地址
 - https://pedronull.xyz
 - 2.0版本未部署，上述链接采用的是 halo-theme-hingle，但效果一样
@@ -14,6 +13,13 @@
 #### 食用指南
 推荐安装时选“远程下载”（远程链接放在下面，国内环境推荐使用第二个链接）;
 如果已经下载压缩包安装了，也可以在博客后台 “主题 > Hingle > ...更多 > 在线更新” 就能实时更新到最新的版本
+
+本仓库下载：
+```
+https://github.com/CheNing233/halo-theme-hingle2.0/archive/refs/heads/master.zip
+```
+
+原下载：
 
 - https://gitee.com/PedroNull/halo-theme-hingle2.0.git
 - https://github.com/Pedro-null/halo-theme-hingle2.0.git

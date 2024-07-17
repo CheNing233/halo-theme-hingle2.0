@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org"
-    th:replace="~{module/macro :: html(title = '归档' + ${site.title}, head = ~{::head}, content = ~{::content})}">
+    th:replace="~{module/macro :: html(title = '归档' + '-' + ${site.title}, head = ~{::head}, content = ~{::content})}">
 
     <th:block th:fragment="head">
         <head>
