@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org"
-    th:replace="~{module/macro :: html(title = ${post.spec.title} + '-' + ${site.title}, head = ~{::head}, content = ~{::content})}">
+<html
+        xmlns:th="https://www.thymeleaf.org"
+        th:replace="~{module/macro :: html(title = ${post.spec.title} + ' - ' + ${site.title}, head = ~{::head}, content = ~{::content})}"
+>
 <th:block th:fragment="head">
 
     <script>isPost = true;</script>
 
     <th:block th:if="${theme.config.genernal.KaTex_plugin}">
         <link rel="stylesheet"
-            th:href="@{/assets/plugins/katex/dist/katex.min.css?v={version}(version=${theme.spec.version})}">
+              th:href="@{/assets/plugins/katex/dist/katex.min.css?v={version}(version=${theme.spec.version})}">
         <script th:src="@{/assets/plugins/katex/dist/katex.min.js?v={version}(version=${theme.spec.version})}"></script>
     </th:block>
 
-    <link rel="stylesheet" th:href="@{https://cdn.staticfile.org/highlight.js/11.9.0/styles/{css}(css=${theme.config.genernal.code_css})}">
+    <link rel="stylesheet"
+          th:href="@{https://cdn.staticfile.org/highlight.js/11.9.0/styles/{css}(css=${theme.config.genernal.code_css})}">
     <script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 </th:block>
@@ -44,14 +47,14 @@
 
                     <th:block th:if="${postCursor.hasPrevious()}">
                         <li>上一篇: <a th:href="@{${postCursor.previous.status.permalink}}"
-                                th:text="${postCursor.previous.spec.title}"></a></li>
+                                       th:text="${postCursor.previous.spec.title}"></a></li>
                     </th:block>
                     <th:block th:unless="${postCursor.hasPrevious()}">
                         <li>上一篇: 看完啦 (つд⊂)</li>
                     </th:block>
                     <th:block th:if="${postCursor.hasNext()}">
                         <li>下一篇: <a th:href="@{${postCursor.next.status.permalink}}"
-                                th:text="${postCursor.next.spec.title}"></a></li>
+                                       th:text="${postCursor.next.spec.title}"></a></li>
                     </th:block>
                     <th:block th:unless="${postCursor.hasNext()}">
                         <li>下一篇: 看完啦 (つд⊂)</li>
@@ -63,7 +66,7 @@
                 <section class="post-tags">
                     <th:block th:each="tag : ${post.tags}">
                         <a class="-none-link" rel="tags" th:href="${tag.status.permalink}"
-                            th:text="${tag.spec.displayName}"></a>
+                           th:text="${tag.spec.displayName}"></a>
                     </th:block>
                 </section>
             </th:block>
@@ -72,7 +75,7 @@
             <th:block th:if="${theme.config.genernal.author_text} != null">
                 <section class="post-author">
                     <figure class="author-avatar">
-                        <img th:src="@{${site.logo}}" />
+                        <img th:src="@{${site.logo}}"/>
                     </figure>
                     <div class="author-info">
                         <h4 th:text="${site.title}"></h4>
@@ -95,12 +98,12 @@
                     }
                 </script>
                 <halo:comment group="content.halo.run" kind="Post" th:attr="name=${post.metadata.name}"
-                    colorScheme="onli" />
+                              colorScheme="onli"/>
             </div>
 
         </div>
     </main>
-    
+
 
 </th:block>
 

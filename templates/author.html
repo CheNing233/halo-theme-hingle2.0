@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html 
 xmlns:th="https://www.thymeleaf.org"
-th:replace="~{module/macro :: html(title = ${author.spec.displayName} + '-' + ${site.title}, head=null, content = ~{::content})}"
+th:replace="~{module/macro :: html(title = ${author.spec.displayName} + ' - ' + ${site.title}, head=null, content = ~{::content})}"
 >
 
     <th:block th:fragment="content">
