@@ -1,11 +1,17 @@
 <div class="home-social" th:with="social_medias=${theme.config.social.social_media}">
     <th:block th:each="social_media : ${social_medias}">
         <th:block th:switch="${social_media.social_type}">
+            <a th:case="'bilibili'"
+               th:href="${social_media.url}"
+               th:title="${social_media.name}"
+            >
+                <i class="fa-brands fa-bilibili"></i>
+            </a>
             <a th:case="'email'" th:href="'mailto:' + ${social_media.url}" th:title="${social_media.name}">
                 <i class="fa fa-envelope"></i>
             </a>
             <a th:case="'github'" th:href="${social_media.url}" th:title="${social_media.name}">
-                <i class="fa fa-github"></i>
+                <i class="fa-brands fa-github"></i>
             </a>
             <a th:case="'weibo'" th:href="'https://weibo.com/' + ${social_media.url}" th:title="${social_media.name}">
                 <i class="fa fa-weibo"></i>

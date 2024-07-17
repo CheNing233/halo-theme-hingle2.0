@@ -570,6 +570,8 @@ spec:
               name: social_type
               label: 类型
               options:
+                - label: BiliBili
+                  value: bilibili
                 - label: 电子邮箱
                   value: email
                 - label: 腾讯 QQ
