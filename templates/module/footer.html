@@ -12,16 +12,28 @@
             <div align="left">
                 <div>©
                     <span
-                        id="timeyear"
-                        th:text="${#dates.format(new java.util.Date().getTime(), 'yyyy')}">
+                            id="timeyear"
+                            th:text="${#dates.format(new java.util.Date().getTime(), 'yyyy')}">
                     </span>
-                    <img class="mdui-img-circle" height="24" width="24" th:src="@{${site.logo}}">
+                    <img
+                            style="margin-top: -3px; margin-left: 2px; margin-right: 2px;"
+                            height="18"
+                            width="18"
+                            th:src="@{${site.logo}}"
+                    >
                     <a th:text="${site.title}"></a>
+                    <span>all rights reserved</span>
                     <a
-                        href="https://beian.miit.gov.cn/"
-                        target="_blank"
-                        th:text="${theme.config.genernal.icp}"
+                            href="https://beian.miit.gov.cn/"
+                            target="_blank"
+                            th:text="${theme.config.genernal.icp}"
                     ></a>
+                </div>
+                <div>
+                    <span>
+                        本站内容未特别注明的内容均为原创，并采用「<a href="https://creativecommons.org/licenses/by-nc/4.0/"
+                        >CC BY-NC 4.0</a>」许可协议，转载请注明来源。
+                    </span>
                 </div>
                 <div>Powered by <a href="https://halo.run/" target="_blank">Halo</a>. Theme <a
                         href="https://github.com/Pedro-null/halo-theme-Hingle" target="_blank">Hingle</a> by <a
