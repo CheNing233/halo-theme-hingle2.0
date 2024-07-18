@@ -28,7 +28,7 @@
                             <span th:if="${not #lists.isEmpty(post.categories)}" th:each="category : ${post.categories}"
                                   class="category" th:text="${category.spec.displayName}"></span>
 
-                            <span class="comments" th:text="${post.stats.comment} + ' ℃'">0 ℃</span>
+                            <span class="view" th:text="${post.stats.visit}"></span>
                         </div>
                     </div>
                 </th:block>
