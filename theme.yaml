@@ -19,7 +19,7 @@ spec:
     - name: "MIT"
       url: "https://github.com/Pedro-null/halo-theme-hingle2.0/blob/main/LICENSE"
   page:
-    - name: "links"
+    - name: "友链"
       description: "友情链接"
       screenshot:
-      file: links.html
+      file: "links.html"

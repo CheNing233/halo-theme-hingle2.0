@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org"
-    th:replace="~{module/macro :: html(title = 'Error'  + '-' + ${site.title}, head=null, content = ~{::content})}">
+    th:replace="~{module/macro :: html(title = 'Error'  + ' - ' + ${site.title}, head=null, content = ~{::content})}">
 
 <th:block th:fragment="content">
     <main>
         <div class="wrap">
             <div class="error-page">
+                <img th:src="@{/assets/images/error.png}"
+                    style="border-radius: 66%; width: 20em; height: 20em;"
+                />
 
-                <figure class="author-avatar">
-                    <img th:src="@{/assets/images/404.png}" />
-                </figure>
+                <h2 th:text="${error.status} + ' ' + ${error.title}"
+                    style="padding-top: 1em;"
+                ></h2>
 
-                <h2 th:text="${error.status} + ${error.title}"></h2>
                 <p th:if="${not #strings.isEmpty(error.detail)}" th:text="${error.detail}"></p>
-                <p>点击 <a th:href="@{/}">这里</a> 返回首页</p>
+                <p>点击「<a th:href="@{/}">这里</a>」返回首页</p>
             </div>
         </div>
     </main>
