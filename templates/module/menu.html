@@ -1,7 +1,7 @@
 <nav class="head-menu">
     <th:block th:each="menuItem : ${menuFinder.getPrimary().menuItems}">
         <a th:href="@{${menuItem.status.href}}"
-           th:target="${menuItem.spec.target}"
+           th:target="${menuItem.spec.target?.value}"
            th:text="${menuItem.status.displayName}"></a>
     </th:block>
 </nav>
